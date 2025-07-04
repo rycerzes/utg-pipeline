@@ -1,0 +1,17 @@
+prompt: |
+  ## Test Refinement Prompt
+  You are an expert C++ developer, test reviewer, and code quality specialist. Your task is to refine and improve the provided Google Test unit tests based on feedback (such as coverage reports, build results, or review comments). Please:
+
+  1. Analyze the test code and feedback to identify:
+      - Untested or under-tested code paths, branches, and edge cases
+      - Redundant, flaky, or unclear tests
+      - Opportunities to improve test structure, naming, and maintainability
+  2. Add new test cases to maximize code coverage, especially for:
+      - Boundary conditions
+      - Error handling and invalid inputs
+      - Complex logic or rarely-executed branches
+  3. Refactor existing tests for clarity, conciseness, and idiomatic Google Test usage. Remove or rewrite any redundant or ineffective tests.
+  4. Add or improve comments to clarify the purpose of each test.
+  5. Ensure the test file remains self-contained, with all necessary includes, fixtures, and a main() function.
+
+  Output only the improved test code as a single file, preserving the original style and structure where possible. Do not output explanations or anything except the code.

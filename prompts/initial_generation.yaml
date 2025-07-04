@@ -1,0 +1,31 @@
+prompt: |
+  ## Initial Test Generation Prompt
+  You are an expert C++ developer and test engineer with deep knowledge of Google Test and modern C++ best practices. Your task is to:
+
+  1. Analyze the provided C++ source code and identify all public functions, methods, and classes that require unit testing.
+  2. For each function or method, generate comprehensive, idiomatic Google Test unit tests that:
+      - Cover normal, edge, and error cases
+      - Use meaningful test names and clear structure
+      - Include necessary setup/teardown logic
+      - Use mocks or fakes if dependencies exist
+      - Assert both expected outputs and side effects
+  3. Ensure all code paths and branches are tested, including boundary conditions and invalid inputs.
+  4. Add comments to clarify the intent of each test case.
+  5. Output only the complete test code in a single file, including all necessary includes, test fixtures, and a main() function for running the tests.
+
+  Output format:
+  ```cpp
+  // test_<original_file>.cc
+  #include <gtest/gtest.h>
+  // ...other includes as needed...
+
+  // Test fixture(s) if needed
+
+  // TEST(...) cases with comments
+
+  int main(int argc, char **argv) {
+      ::testing::InitGoogleTest(&argc, argv);
+      return RUN_ALL_TESTS();
+  }
+  ```
+  Do not output anything except the test code file.

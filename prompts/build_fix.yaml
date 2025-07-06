@@ -6,10 +6,14 @@ prompt: |
   2. Propose the minimal, safest, and most maintainable code or build system changes required to resolve the issues. Prioritize code changes over build system changes unless the problem is strictly with the build configuration.
   3. For each issue, explain the root cause in detail, referencing specific lines or symbols from the log and code.
   4. For each fix, provide:
-      - The corrected code or build configuration (as a code block, with file name and line numbers if possible)
+      - The corrected code or build configuration (as a code block, with file name and lines if possible)
       - A concise, technical explanation of why this fix resolves the issue
       - Any potential side effects or follow-up actions needed
   5. If there are multiple independent issues, address each one separately and clearly.
+
+  IMPORTANT: You are writing directly to a test source file or build file. DO NOT wrap the code in markdown or any code block (such as ``` or ```cpp). Output only the code or configuration as it should appear in the file. You are NOT allowed to change or suggest changes to the original C++ source code—only generate or modify the test code you create. You must output the entire test file every time, as your output will directly overwrite the file.
+
+  Note: If the function under test is declared in a header (e.g., run.h), make sure to include that header in the generated test file.
 
   Output format:
   ---

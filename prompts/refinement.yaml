@@ -14,4 +14,8 @@ prompt: |
   4. Add or improve comments to clarify the purpose of each test.
   5. Ensure the test file remains self-contained, with all necessary includes, fixtures, and a main() function.
 
+  IMPORTANT: You are writing directly to a C++ test source file. DO NOT wrap the code in markdown or any code block (such as ```cpp or ```). Output only valid C++ code, as it should appear in the file. You are NOT allowed to change or suggest changes to the original C++ source code—only generate or modify the test code you create. You must output the entire test file every time, as your output will directly overwrite the file.
+
+  Note: If the function under test is declared in a header (e.g., run.h), make sure to include that header in the generated test file.
+
   Output only the improved test code as a single file, preserving the original style and structure where possible. Do not output explanations or anything except the code.

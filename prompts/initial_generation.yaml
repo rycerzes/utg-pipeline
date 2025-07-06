@@ -13,10 +13,12 @@ prompt: |
   4. Add comments to clarify the intent of each test case.
   5. Output only the complete test code in a single file, including all necessary includes, test fixtures, and a main() function for running the tests.
 
+  IMPORTANT: You are writing directly to a C++ test source file. DO NOT wrap the code in markdown or any code block (such as ```cpp or ```). Output only valid C++ code, as it should appear in the file. You are NOT allowed to change or suggest changes to the original C++ source code—only generate or modify the test code you create. You must output the entire test file every time, as your output will directly overwrite the file.
+
   Output format:
-  ```cpp
   // test_<original_file>.cc
   #include <gtest/gtest.h>
+  #include "run.h"
   // ...other includes as needed...
 
   // Test fixture(s) if needed
@@ -27,5 +29,4 @@ prompt: |
       ::testing::InitGoogleTest(&argc, argv);
       return RUN_ALL_TESTS();
   }
-  ```
   Do not output anything except the test code file.
